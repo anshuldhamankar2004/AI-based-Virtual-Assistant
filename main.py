@@ -112,7 +112,7 @@ def pass_generator():
     print(password)
 
 def ai(prompt):
-    openai.api_key = "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"
+    openai.api_key = "API KEY"
     text = f"Open AI response from{prompt}\nn ***********************\\n"
 
     response = openai.Completion.create(
@@ -135,7 +135,7 @@ def ai(prompt):
 
 #random.randint(1, 2363333333)}
 def imagen(prompt):
-    openai.api_key = "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"
+    openai.api_key = "API KEY"
     response = openai.Image.create(
         prompt=prompt,
         n=1,
@@ -143,7 +143,7 @@ def imagen(prompt):
     )
     image_url = response['data'][0]['url']
     return image_url
-app_id="LUY8P4-LPGQRX5GVK"
+app_id="APP ID"
 def computational_intelligence(question):
     try:
         client = wolframalpha.Client(app_id)
@@ -156,7 +156,7 @@ def computational_intelligence(question):
         speaker.speak("Sorry sir I couldn't fetch your question's answer. Please try again ")
         functioning()
 
-def fetch_news(api_key="40b18b18746d4cce8688abe08f9ec91c", country_code='in'):
+def fetch_news(api_key="API KEY", country_code='in'):
     NEWS_API_URL = 'https://newsapi.org/v2/top-headlines'
 
     params = {
@@ -557,7 +557,7 @@ def functioning():
         elif "weather in".lower() in query.lower():
             query = query.lower().replace("Echo ", "").replace("echo ", "")
 
-            api_key = '30d4741c779ba94c470ca1f63045390a'
+            api_key = 'API KEY'
 
             user_input = query.replace("weather in ","")
 
